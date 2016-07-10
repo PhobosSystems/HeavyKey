@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HeavyKey</string>
+    <string name="title_activity_make_pad">MakePad</string>
+    <string name="title_activity_send_message">sendMessage</string>
+    <string name="InvalidInput">invalidInput</string>
+    <string name="deleteContact">Delete Contact</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_license">License</string>
+    <string name="title_activity_help">Help</string>
+    <string name="helpText">Step 1: Adding a Contact:\nPress \'Add Contact\' on the main screen to go to the add contact screen and press \"Add Contact.\" Enter your desired phone number and press \'Add Contact\'\n\nStep 2: Exchanging keys:\nOnce you and your friend have each other as contacts, hold your finger down on the desired contact in the contact list screen. From the resulting menu choose \"make pad\". Transfer the key using either Android Beam or Bluetooth, the transfer protocol will give you instructions. Once the pad has been sent, on the receiving phone hold down on the number of the contact whose phone the pad originated and press \'Get Pad From Storage\'.\n\nStep 3: verifying pad transfer:\ntap on the desired contact once to open the messenger screen. Look in the top right corner to see Remaining Secure Bytes: ### in | ### out. If this readout matches on both devices, they are primed for communication.</string>
+    <string name="makepadtitle">Make Pad</string>
+    <string name="addContactTitleString">Add Contact</string>
+    <string name="chooseContactTitle">Choose Contact</string>
+    <string name="messengerScreenTitle">Messages</string>
+</resources>

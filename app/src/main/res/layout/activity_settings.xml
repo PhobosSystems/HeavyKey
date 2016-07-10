@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.phobos.system.heavykey.AppSettings">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allow Automatic Resychronization"
+        android:id="@+id/checkBox"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="125dp"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto-resync will automatically delete unused portions of your key so that it will line up with the other user's in the event of a failed message creating a disparity. This will happen automatically unless you disable the feature. It is very unlikely that this presents any security vulnerabilities, but it is better to leave the choice in the hands of the user."
+        android:id="@+id/textView3"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openPrivacy"
+        android:text="Privacy Policy"
+        android:editable="false"
+        android:id="@+id/policy"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="License"
+        android:editable="false"
+        android:id="@+id/license"
+        android:onClick="openLicense"
+        android:layout_below="@+id/policy"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

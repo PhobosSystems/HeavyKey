@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.phobos.system.heavykey.AddContact">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="##########"
+        android:id="@+id/phoneEntry"
+        android:layout_marginTop="75dp"
+        android:inputType="phone"
+        android:layout_below="@+id/btnDiag"
+        android:layout_alignEnd="@+id/addContact" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        android:id="@+id/addContact"
+        android:onClick="addContact"
+        android:layout_below="@+id/phoneEntry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number:"
+        android:id="@+id/textView"
+        android:textSize="16dp"
+        android:layout_alignTop="@+id/phoneEntry"
+        android:layout_toLeftOf="@+id/addContact"
+        android:layout_above="@+id/addContact"
+        android:autoText="false"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textIsSelectable="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Contacts"
+        android:id="@+id/clrContacts"
+        android:onClick="clearContacts"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diag"
+        android:onClick="printDatabase"
+        android:id="@+id/btnDiag"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/clrContacts"
+        android:layout_alignStart="@+id/clrContacts"
+        android:layout_marginTop="49dp"
+        android:clickable="false"
+        android:enabled="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Pad to Existing Contact"
+        android:id="@+id/addPad"
+        android:onClick="getPadFromFile"
+        android:layout_below="@+id/addContact"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:id="@+id/txtName"
+        android:textSize="16dp"
+        android:autoText="false"
+        android:gravity="center_vertical"
+        android:textIsSelectable="false"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="User Name"
+        android:id="@+id/edtName"
+        android:layout_above="@+id/textView"
+        android:layout_alignEnd="@+id/phoneEntry"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignStart="@+id/phoneEntry" />
+
+</RelativeLayout>

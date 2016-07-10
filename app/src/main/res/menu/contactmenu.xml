@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/delete"
+        android:title="@string/deleteContact"/>
+    <item android:id="@+id/makepad"
+        android:title="Make Pad"/>
+    <item android:id="@+id/getpad"
+        android:title="Get Pad From Storage"/>
+    <item android:id="@+id/deleteMessages"
+        android:title="Delete Messages"/>
+</menu>
