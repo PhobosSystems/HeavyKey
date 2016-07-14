@@ -32,6 +32,8 @@ public class AddContact extends AppCompatActivity {
         EditText nameField = (EditText) findViewById(R.id.edtName);
         String number = phone.getText().toString();
         String name = nameField.getText().toString();
+        name = name.replaceAll("[^a-zA-Z]", " ");
+
 
        /* if (!PhoneNumberUtils.isWellFormedSmsAddress(number))
         {
@@ -39,7 +41,6 @@ public class AddContact extends AppCompatActivity {
         }
         number = number.replaceAll("\\D+","");*/
 
-         //checks input for validity -- needs to be fixed to accomodate non American phone numbers
         if (number.equals(""))
         {
             return;
