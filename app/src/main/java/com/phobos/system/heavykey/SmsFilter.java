@@ -69,7 +69,7 @@ public class SmsFilter extends BroadcastReceiver {
                     return;
                 }
                 sender = contactStringArray[senderIndex];
-
+            //    System.out.println("SENDER INDEX: " + senderIndex);
                 System.out.println(sender);
                 System.out.println(dbHandler.entryExists(DBHandler.TABLE_CONTACTS, DBHandler.COLUMN_NAME, sender));
                 //determines whether or not message is important

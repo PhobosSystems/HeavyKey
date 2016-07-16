@@ -42,7 +42,7 @@ public class messengerScreen extends AppCompatActivity {
         final ListView list = (ListView) findViewById(R.id.list);
         registerForContextMenu(list);
 
-        // gets the index of the phone number
+        // gets the index of the name
         Intent intent = getIntent();
         index = intent.getIntExtra("integer", 1);
         // displays remaining bytes

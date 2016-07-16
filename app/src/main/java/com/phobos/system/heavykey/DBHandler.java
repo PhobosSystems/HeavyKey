@@ -37,7 +37,9 @@ public class DBHandler extends SQLiteOpenHelper {
                 COLUMN_SENDPAD + " BLOB, " +
                 COLUMN_RECEIVEPAD + " BLOB, " +
                 COLUMN_MESSAGES + " TEXT " + ");";
+      //  String zeroAutoIncrement = "ALTER TABLE " + TABLE_CONTACTS + "  AUTO_INCREMENT=0";
         db.execSQL(query);
+      //  db.execSQL(zeroAutoIncrement);
     }
 
 
@@ -267,8 +269,8 @@ public class DBHandler extends SQLiteOpenHelper {
         if (c.moveToFirst()) {
             do {
                 do {
-                    String number = c.getString(contentpathColumn);
-                    returnMsg.add(number);
+                    String name  = c.getString(contentpathColumn);
+                    returnMsg.add(name);
                 } while (c.moveToNext());
             } while (c.moveToNext());
         }

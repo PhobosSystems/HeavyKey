@@ -129,14 +129,13 @@ public class chooseContact extends AppCompatActivity {
             startActivity(getIntent());
 
             } else if (menuItemIndex == R.id.makepad) {
-                final ListView list = (ListView) findViewById(R.id.list);
-                String name = list.getAdapter().getItem(cellIndex).toString();
+
+                String name = dbHandler.getName(cellIndex);
                 Intent intent = new Intent(this, MakePad.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
             } else if (menuItemIndex == R.id.getpad) {
-                final ListView list = (ListView) findViewById(R.id.list);
-                String number = list.getAdapter().getItem(cellIndex).toString();
+                String name =  dbHandler.getName(cellIndex);//     PHOBOS BAD CODE MONUMENT #1 { String number = list.getAdapter().getItem(cellIndex).toString(); }
                 File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "pad.jpg");
                 int size = (int) file.length();
                 byte[] bytes = new byte[size];
@@ -153,16 +152,16 @@ public class chooseContact extends AppCompatActivity {
                     e.printStackTrace();
 
                 }
-                dbHandler.setReceivePad(EncryptionHandler.getPadSecondHalf(bytes), number);
-                dbHandler.setSendPad(EncryptionHandler.getPadFirstHalf(bytes), number);
+                dbHandler.setReceivePad(EncryptionHandler.getPadSecondHalf(bytes), name);
+                dbHandler.setSendPad(EncryptionHandler.getPadFirstHalf(bytes), name);
                 System.out.println("pad accepted");
                 boolean deleted = file.delete();
             }
             else if (menuItemIndex == R.id.deleteMessages)
             {
-                final ListView list = (ListView) findViewById(R.id.list);
-                String number = list.getAdapter().getItem(cellIndex).toString();
-                dbHandler.clearMessages(number);
+
+                String name = dbHandler.getName(cellIndex);
+                dbHandler.clearMessages(name);
             }
         } catch (Exception e) {
 
