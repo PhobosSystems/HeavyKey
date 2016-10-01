@@ -3,3 +3,5 @@ Contributors
 John Balis
 
 Doran Redlich
+
+Christian Farris
