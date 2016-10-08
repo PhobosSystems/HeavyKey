@@ -1,6 +1,7 @@
 Contributors
 
-John Balis
+
+John Balis (Phobos Systems)
 
 Doran Redlich
 

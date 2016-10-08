@@ -61,8 +61,8 @@ public class MakePad extends AppCompatActivity {
          //   System.out.println(Arrays.toString(pad));
             System.out.println(Arrays.toString(EncryptionHandler.getPadFirstHalf(pad)) + Arrays.toString(EncryptionHandler.getPadSecondHalf(pad)));
             // switch active code out here for local testing
-        // makePadDb.setReceivePad(EncryptionHandler.getPadFirstHalf(pad), name);
-        //  makePadDb.setSendPad(EncryptionHandler.getPadSecondHalf(pad), name);
+       //  makePadDb.setReceivePad(EncryptionHandler.getPadFirstHalf(pad), name);
+         // makePadDb.setSendPad(EncryptionHandler.getPadSecondHalf(pad), name);
            makePadDb.setReceivePad(pad, name);
            makePadDb.setSendPad(pad, name);
             String dbString = makePadDb.extractContactData(DBHandler.TABLE_CONTACTS);
@@ -80,6 +80,7 @@ public class MakePad extends AppCompatActivity {
 
             SavePad savePad = new SavePad();
             savePad.setFileName("pad.jpg");
+
             savePad.execute(pad);
 
 

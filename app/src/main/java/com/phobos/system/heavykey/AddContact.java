@@ -27,6 +27,7 @@ public class AddContact extends AppCompatActivity {
         dbHandler = new DBHandler(this, null, null, 1);
     }
 
+
     public void addContact(View view) {
         EditText phone = (EditText) findViewById(R.id.phoneEntry);
         EditText nameField = (EditText) findViewById(R.id.edtName);
